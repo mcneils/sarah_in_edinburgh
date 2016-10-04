@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About</title>
+    <!-- Bootstrap -->
+	   <link href="css/style1.css" rel="stylesheet">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+  </head>
+  <body>
+    <div class = "home_button"><a href="index.html"><p>Home</p></a></div>
+    <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>  
+    <!--eventually this needs to go in its own js file-->
+    <script>
+
+      $(document).ready(function(){ 
+      //keeps the picture in the right place when window is resized
+        $(window).resize(function(){ 
+           $('.my_images').css({
+            position:'absolute',
+            left: ($(window).width() 
+              - $('.my_images').outerWidth())/2,
+            top: ($(window).height() 
+              - $('.my_images').outerHeight())/2
+            });   
+        });
+     
+       
+ // To initially run the function:
+        $(window).resize();
+      });
+    </script>
+    <div id = "my_images">  
+      <img src = "images/profile.jpg" id="main_picture">     
+      <div class="caption" id="abt_caption"><p>I'm an American student living and going to school in Edinburgh, Scotland, for the autumn of 2016. I decided to create a photo blog to display the pictures I'm taking because many people who are important to me (like, say, my parents) don't have Facebook, which would be my other choice for this endeavour. I wanted to have a way to share my photos from this semester with them without changing my privacy settings. Also, I'm trying to break, or at least lessen, my Facebook habit. Anyway, I hope you enjoy!</p>
+        <h2>Contact</h2><p>If you don't have at least one way of contacting me, I have literally no idea how you found this. But, obviously you did, so if you need to complain (or compliment???), I can also be reached at an email which I will put in later.<br/> All pictures taken by me, with exception of ones I'm featured in (although even some of those, like the one above, are taken on self-timer)</p></div> 
+    </div>
+  </body>
+</html>

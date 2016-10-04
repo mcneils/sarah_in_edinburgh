@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Will need to figure out how to get this to change based on Album name</title>
+    <!-- Bootstrap -->
+	   <link href="css/style1.css" rel="stylesheet">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+  </head>
+  <body>
+    <div class = "home_button"><a href="index.html"><p>Home</p></a></div>
+    <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>  
+    <!--eventually this needs to go in its own js file-->
+    <script>
+    //array of names of pictures to be displayed
+      var pics = ["craigmillar_1.jpg", "craigmillar_16.jpg"];
+      //array of captions for pictures
+      var captions = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18"];
+      //keeping track of where user is in array
+      var counter = -1;
+      $(document).ready(function(){ 
+      //keeps the picture in the right place when window is resized
+        $(window).resize(function(){ 
+           $('.my_images').css({
+            position:'absolute',
+            left: ($(window).width() 
+              - $('.my_images').outerWidth())/2,
+            top: ($(window).height() 
+              - $('.my_images').outerHeight())/2
+            });   
+        });
+        //for going to the previous photo
+        $('.left_button').click(function(){
+          if (counter === -1 || counter === 0){
+            $("#my_images").html('<div class="caption"><p> this is where I would put a description...IF I HAD ONE!</p></div>'); 
+            if (counter === 0){
+              counter -= 1;
+            }      
+          } else {
+            counter-=1;
+            $("#my_images").html('<img src = "images/craigmillar/craigmillar_'+
+            counter.toString()+'.jpg" id="main_picture"> <div class="caption"><p>'+
+            captions[counter]+'</p></div>');        
+          }
+        });
+        //for going to the next photo
+        $('.right_button').click(function(){
+          if (counter < captions.length-1){
+            counter +=1;
+            console.log(counter);
+            $("#my_images").html('<img src = "images/craigmillar/craigmillar_'+
+             counter.toString()+'.jpg" id="main_picture"> <div class="caption"><p>'+
+             captions[counter]+'</p></div>');
+          }else{
+            if(counter === captions.length-1){
+              counter+=1;
+            }
+            $("#my_images").html('<img src = "images/end.jpg" id="main_picture">');
+          }
+          
+       }); 
+ // To initially run the function:
+        $(window).resize();
+      });
+    </script>
+    <div id = "my_images">       
+      <div class="caption"><p>this is where I would put a description...IF I HAD ONE!</p></div> 
+    </div>
+    <img src = "images/left_button.jpg" class="left_button">
+    <img src = "images/right_button.jpg" class="right_button">
+  </body>
+</html>

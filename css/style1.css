@@ -1,0 +1,104 @@
+body {
+	background-color: black;
+}
+
+@font-face {
+	font-family: 'Quaver'; /*a name to be used later*/
+	src: url('QuaverSerif.otf'); /*URL to font*/
+}
+
+@font-face{
+	font-family: 'QuaverSans';
+	src: url('QuaverSans.otf');
+}
+
+@font-face{
+	font-family: 'Fanwood';
+	src: url('Fanwood.otf');
+}
+
+@font-face{
+	font-family: 'FanwoodBold';
+	src: url('Fanwood Text.otf');
+}
+
+@font-face{
+	font-family: 'Amble';
+	src: url('Amble Light Condensced.ttf');
+}
+
+#main_picture {
+	border: 10px solid white;
+	max-width: 85vw;	
+	max-height: 85vh;
+}
+
+.cover_pic {
+	border: 10px solid white;
+	max-width: 90%;
+}
+
+p {
+	color: white;
+}
+
+#headline {
+	color:white;
+	font-style: italic
+}
+
+.caption{
+	font-family: 'Fanwood';
+}
+
+.home_button{
+	font-family: 'QuaverSans';
+	font-size: 30px;
+	position: absolute;
+	top: 0px;
+	left: 25px;
+}
+
+#my_images{
+    text-align:center;
+    margin-top:90px;
+    font-size: 22px;    
+	max-height: 70%
+}
+
+#menu{
+    margin-top:100px;
+    position: absolute;
+    left: 25px;
+    font-size: 22px;
+}
+
+.right_button{
+	position:absolute;
+	right: 25px;
+	margin-bottom: 10px
+}
+
+.left_button{
+	position:absolute;
+	left: 25px;
+	margin-bottom: 10px
+}
+
+a {
+	text-decoration: none;
+}
+
+#menu_caption {
+	text-align: center;
+}
+
+#abt_caption {
+	max-width: 70vw;
+	margin-left: 15vw;
+}
+
+h2 {
+	color: white;
+	font-family: 'FanwoodBold';
+}
