@@ -49,7 +49,8 @@
             counter-=1;
             $("#my_images").html('<img src = "images/around/around_'+
             counter.toString()+'.JPG" id="main_picture"> <div class="caption"><p>'+
-            captions[counter]+'</p></div>');        
+            captions[counter]+'</p></div>');
+            $('title').html('This changed');        
           }
         });
         //for going to the next photo

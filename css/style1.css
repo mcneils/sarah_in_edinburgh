@@ -30,7 +30,7 @@ body {
 #main_picture {
 	border: 10px solid white;
 	max-width: 85vw;	
-	max-height: 85vh;
+	max-height: 79vh;
 }
 
 .cover_pic {
@@ -61,7 +61,7 @@ p {
 
 #my_images{
     text-align:center;
-    margin-top:90px;
+    margin-top:70px;
     font-size: 22px;    
 	max-height: 70%
 }
@@ -76,13 +76,13 @@ p {
 .right_button{
 	position:absolute;
 	right: 25px;
-	margin-bottom: 10px
+	top: 45vh;
 }
 
 .left_button{
 	position:absolute;
 	left: 25px;
-	margin-bottom: 10px
+	top: 45vh;
 }
 
 a {
