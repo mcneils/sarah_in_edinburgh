@@ -5,6 +5,7 @@
 	   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	   <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Hermitage of Braid and Blackford Hill</title>
+      <script src='photo_slider.js'></script>
     <!-- Bootstrap -->
 	   <link href="css/style1.css" rel="stylesheet">
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -19,55 +20,11 @@
     <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>  
     <!--eventually this needs to go in its own js file-->
     <script>
+     var intro = '<h2>The Hermitage of Braid and Blackford Hill</h2><p id="abt_caption">The Hermitage of Braid and Blackford Hill is a local nature reserve in southwest Edinburgh that provides sweeping views of the city and the surrounding area. From the top of Blackford Hill, one can see for dozens of kilometers, if the weather is clear (haha). The Royal Observatory sits on one edge of the park.</p>';
+     var file_path = 'hermitage/hermitage_';
       //array of captions for pictures
       var captions = ["A view of Arthur's seat.", "Looking southwest from Blackford Hill, toward Pentland Regional Park", "Blackford Pond", "Edinburgh Castle from Blackford Hill", "The Royal Observatory", "Edinburgh!"];
-      //keeping track of where user is in array
-      var counter = -1;
-      $(document).ready(function(){ 
-      //keeps the picture in the right place when window is resized
-        $(window).resize(function(){ 
-           $('.my_images').css({
-            position:'absolute',
-            left: ($(window).width() 
-              - $('.my_images').outerWidth())/2,
-            top: ($(window).height() 
-              - $('.my_images').outerHeight())/2
-            });   
-        });
-        //for going to the previous photo
-        $('.left_button').click(function(){
-          if (counter === -1 || counter === 0){
-            $("#my_images").html(' <div class="caption"><h2>The Hermitage of Braid and Blackford Hill</h2><p id="abt_caption">The Hermitage of Braid and Blackford Hill is a local nature reserve in southwest Edinburgh that provides sweeping views of the city and the surrounding area. From the top of Blackford Hill, one can see for dozens of kilometers, if the weather is clear (haha). The Royal Observatory sits on one edge of the park.</p><p>Click on the right arrow to go forward a slide, the left to go back one.</p></div>'); 
-            if (counter === 0){
-              counter -= 1;
-            }      
-          } else {
-            counter-=1;
-            $("#my_images").html('<img src = "images/hermitage/hermitage_'+
-            counter.toString()+'.JPG" id="main_picture"> <div class="caption"><p>'+
-            captions[counter]+'</p></div>');        
-          }
-        });
-        //for going to the next photo
-        $('.right_button').click(function(){
-          if (counter < captions.length-1){
-            counter +=1;
-            console.log(counter);
-            $("#my_images").html('<img src = "images/hermitage/hermitage_'+
-             counter.toString()+'.JPG" id="main_picture"> <div class="caption"><p>'+
-             captions[counter]+'</p></div>');
-          }else{
-            if(counter === captions.length-1){
-              counter+=1;
-            }
-            $("#my_images").html('<img src = "images/end.jpg" id="main_picture">');
-          }
-          
-       }); 
- // To initially run the function:
-        $(window).resize();
-        $('.left_button').click();
-      });
+      photo_slider(intro, file_path, captions);
     </script>
     <div id = "my_images">       
     

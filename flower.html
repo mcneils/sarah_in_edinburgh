@@ -5,6 +5,7 @@
 	   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	   <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Flora</title>
+    <script src= "photo_slider.js"></script>
     <!-- Bootstrap -->
 	   <link href="css/style1.css" rel="stylesheet">
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -19,57 +20,14 @@
     <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>  
     <!--eventually this needs to go in its own js file-->
     <script>
-    //array of names of pictures to be displayed
-      var pics = ["craigmillar_1.jpg", "craigmillar_16.jpg"];
+
       //array of captions for pictures
-      var captions = ["Near Duddsington Loch", "A Dahlia(?) in someone's front yard (I felt a bit creepy taking the picture, oh well)", "Near Duddsington Loch", "Near Duddsington Loch", "Near Duddsington Loch"];
-      //keeping track of where user is in array
-      var counter = -1;
-      $(document).ready(function(){ 
-      //keeps the picture in the right place when window is resized
-        $(window).resize(function(){ 
-           $('.my_images').css({
-            position:'absolute',
-            left: ($(window).width() 
-              - $('.my_images').outerWidth())/2,
-            top: ($(window).height() 
-              - $('.my_images').outerHeight())/2
-            });   
-        });
-        //for going to the previous photo
-        $('.left_button').click(function(){
-          if (counter === -1 || counter === 0){
-            $("#my_images").html('<div class="caption"><h2>Flora (and eventually Fauna?)</h2><p id="abt_caption">Just a collection of pictures of pretty plants and animals not really have to be associated with one place. I don&apos;t know many of the plant names, so if you do, let me know!</p><p>Click on the right arrow to go forward a slide, the left to go back one.</p></div>'); 
-            if (counter === 0){
-              counter -= 1;
-            }      
-          } else {
-            counter-=1;
-            $("#my_images").html('<img src = "images/flower/flower_'+
-            counter.toString()+'.JPG" id="main_picture"> <div class="caption"><p>'+
-            captions[counter]+'</p></div>');        
-          }
-        });
-        //for going to the next photo
-        $('.right_button').click(function(){
-          if (counter < captions.length-1){
-            counter +=1;
-            console.log(counter);
-            $("#my_images").html('<img src = "images/flower/flower_'+
-             counter.toString()+'.JPG" id="main_picture"> <div class="caption"><p>'+
-             captions[counter]+'</p></div>');
-          }else{
-            if(counter === captions.length-1){
-              counter+=1;
-            }
-            $("#my_images").html('<img src = "images/end.jpg" id="main_picture">');
-          }
-          
-       }); 
- // To initially run the function:
-        $(window).resize();
-        $('.left_button').click();
-      });
+      var captions = ["Near Duddsington Loch", "A Dahlia(?) in someone's front yard (I felt a bit creepy taking the picture, oh well)", "Near Duddsington Loch", "Near Duddsington Loch", "Near Duddsington Loch", "In Greyfriar's Kirkyard", "In Greyfriar's Kirkyard", "In Greyfriar's Kirkyard", "In Greyfriar's Kirkyard", "In Greyfriar's Kirkyard", "In Greyfriar's Kirkyard", "Daisies are my favorite flowers", "Daisy in Greyfriar's Kirkyard", "In Greyfriar's Kirkyard"];
+
+      var file_path = 'flower/flower_';
+      var intro = '<h2>Flora (and eventually Fauna?)</h2><p id="abt_caption">Just a collection of pictures of pretty plants and animals not really have to be associated with one place. I don&apos;t know many of the plant names, so if you do, let me know!</p>';
+      photo_slider(intro, file_path, captions);
+    
     </script>
     <div id = "my_images">       
     </div>

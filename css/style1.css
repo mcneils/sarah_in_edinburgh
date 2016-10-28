@@ -22,14 +22,9 @@ body {
 	src: url('Fanwood Text.otf');
 }
 
-@font-face{
-	font-family: 'Amble';
-	src: url('Amble Light Condensced.ttf');
-}
-
 #main_picture {
 	border: 10px solid white;
-	max-width: 85vw;	
+	max-width: 70%;	
 	max-height: 79vh;
 }
 

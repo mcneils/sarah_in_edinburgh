@@ -7,6 +7,7 @@
     <title>Craigmillar Castle and Park</title>
     <!-- Bootstrap -->
 	   <link href="css/style1.css" rel="stylesheet">
+     <script src = "photo_slider.js"></script>
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -30,53 +31,12 @@
        "The Hermitage of Braid and Blackford Hill and, farther out, Pentland Hills Regional Park", 
        "Grand Dining Hall", "slightly different angle on the castle",
         "Western side", "A tower??", "A gate?? (I have been nominated for the Nobel Prize in literature for my captioning skills)", "Woods in the park!"];
-      //keeping track of where user is in array
-      var counter = -1;
-      $(document).ready(function(){ 
-      //keeps the picture in the right place when window is resized
-        $(window).resize(function(){ 
-           $('.my_images').css({
-            position:'absolute',
-            left: ($(window).width() 
-              - $('.my_images').outerWidth())/2,
-            top: ($(window).height() 
-              - $('.my_images').outerHeight())/2
-            });   
-        });
-        //for going to the previous photo
-        $('.left_button').click(function(){
-          if (counter === -1 || counter === 0){
-            $("#my_images").html('<div class="caption"><h2>Craigmillar Castle and Park</h2><p id ="abt_caption">Craigmillar Castle, which is one of the most-well preserved medieval castles in Scotland (according to signs there), is situated about 3 miles south of Edinburgh&apos;s city center. The oldest parts of the castle date back to the 14th century (according to Wikipedia), built by the Preston family. Construction continued over the next two centuries, before the castle fell into ruin in the 18th century. Mary, Queen of Scots, stayed in the castle for several months following the birth of her son.</p><p>Click on the right arrow to go forward a slide, the left to go back one.</p></div> '); 
-            if (counter === 0){
-              counter -= 1;
-            }      
-          } else {
-            counter-=1;
-            $("#my_images").html('<img src = "images/craigmillar/craigmillar_'+
-            counter.toString()+'.JPG" id="main_picture"> <div class="caption"><p>'+
-            captions[counter]+'</p></div>');        
-          }
-        });
-        //for going to the next photo
-        $('.right_button').click(function(){
-          if (counter < captions.length-1){
-            counter +=1;
-            console.log(counter);
-            $("#my_images").html('<img src = "images/craigmillar/craigmillar_'+
-             counter.toString()+'.JPG" id="main_picture"> <div class="caption"><p>'+
-             captions[counter]+'</p></div>');
-          }else{
-            if(counter === captions.length-1){
-              counter+=1;
-            }
-            $("#my_images").html('<img src = "images/end.jpg" id="main_picture">');
-          }
-          
-       }); 
- // To initially run the function:
-        $(window).resize();
-        $('.left_button').click();
-      });
+
+      var file_path = 'craigmillar/craigmillar_';
+
+      var intro ='<h2>Craigmillar Castle and Park</h2><p id ="abt_caption">Craigmillar Castle, which is one of the most-well preserved medieval castles in Scotland (according to signs there), is situated about 3 miles south of Edinburgh&apos;s city center. The oldest parts of the castle date back to the 14th century (according to Wikipedia), built by the Preston family. Construction continued over the next two centuries, before the castle fell into ruin in the 18th century. Mary, Queen of Scots, stayed in the castle for several months following the birth of her son.</p>';
+      photo_slider(intro, file_path, captions);
+ 
     </script>
     <div id = "my_images">       
     </div>
