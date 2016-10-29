@@ -45,7 +45,7 @@ function photo_slider(intro_slide, file_path, captions){
 function backward(intro_slide, file_path, captions, counter) {
   if (counter === -1 || counter === 0){
     $("#my_images").html('<div class="caption">'+ intro_slide +
-      '<p>Use buttons or l/r keys to flip through pictures.</p></div>'); 
+      '<p>Use buttons or l/r arrow keys to flip through pictures.</p></div>'); 
     if (counter === 0){
       counter -= 1;
     }      
