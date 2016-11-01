@@ -33,6 +33,10 @@ body {
 	max-width: 90%;
 }
 
+.filler {
+	max-width: 90%;
+}
+
 p {
 	color: white;
 }

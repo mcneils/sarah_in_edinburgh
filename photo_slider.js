@@ -69,7 +69,7 @@ function forward(intro_slide, file_path, captions, counter){
     if(counter === captions.length-1){
       counter+=1;
     }
-    $("#my_images").html('<img src = "images/end.jpg" id="main_picture">');
+    $("#my_images").html('<h2>The end!</h2>');
   }
   return counter;
 }
