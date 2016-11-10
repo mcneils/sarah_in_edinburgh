@@ -50,6 +50,11 @@ p {
 	font-family: 'Fanwood';
 }
 
+.homeTitle{
+	font-family: 'Fanwood';
+	text-align: center;
+}
+
 .home_button{
 	font-family: 'QuaverSans';
 	font-size: 30px;
