@@ -1,7 +1,3 @@
-body {
-	background-color: black;
-}
-
 @font-face {
 	font-family: 'Quaver'; /*a name to be used later*/
 	src: url('QuaverSerif.otf'); /*URL to font*/
@@ -28,18 +24,12 @@ body {
 	max-height: 79vh;
 }
 
-.cover_pic {
-	border: 10px solid white;
-	max-width: 90%;
-}
+
 
 .filler {
 	max-width: 90%;
 }
 
-p {
-	color: white;
-}
 
 #headline {
 	color:white;
@@ -50,9 +40,11 @@ p {
 	font-family: 'Fanwood';
 }
 
-.homeTitle{
+.homeTitle{	
+    margin-top:70px;
 	font-family: 'Fanwood';
 	text-align: center;
+	font-size: 22px;
 }
 
 .home_button{
@@ -70,12 +62,6 @@ p {
 	max-height: 70%
 }
 
-#menu{
-    margin-top:100px;
-    position: absolute;
-    left: 25px;
-    font-size: 22px;
-}
 
 .right_button{
 	position:absolute;
@@ -93,10 +79,6 @@ a {
 	text-decoration: none;
 }
 
-#menu_caption {
-	text-align: center;
-}
-
 #abt_caption {
 	max-width: 70vw;
 	margin-left: 15vw;
@@ -106,3 +88,52 @@ h2 {
 	color: white;
 	font-family: 'FanwoodBold';
 }
+
+p {
+  color: white;
+}
+ body {
+  background-color: black;
+}
+
+.img img {
+    width: 100%;
+    height: auto;
+    border: 4px solid #ffffff;
+}
+
+.desc {
+    padding: 5px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 33%;
+}
+
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+

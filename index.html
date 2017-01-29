@@ -1,67 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sarah in Edinburgh</title>
-	<link href="css/style1.css" rel="stylesheet">
+  <link href="css/trial_style.css" rel="stylesheet">
+</head>
+<body>
+<div class = "home_button"><a href = "about.html"><p>About</p></a></div> 
 
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
-  </head>
-  <body>
-    <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
-    <div class = "home_button"><a href = "about.html"><p>About</p></a></div>  
-    <script>
-      $(document).ready(function(){
-        $(window).resize(function(){ 
-          $('.menu').css({
-            position:'absolute',
-            left: ($(window).width() 
-              - $('.menu').outerWidth())/2,
-            top: ($(window).height() 
-             - $('.menu').outerHeight())/2
-          });  
-        }); 
- // To initially run the function:
-        $(window).resize();
-      });
-    </script>
+<p class='homeTitle'>Choose an album to see more pictures!</p> 
 
-  <div id = "menu">
-  <p class='homeTitle'>Choose an album to see more pictures!</p>   
-    <table>
-      <tr>
-        <th><a href="around.html"><img src="images/cover_photos/around.jpg" class ="cover_pic"></a></th>
-        <th><a href="craigmillar.html"><img src ="images/cover_photos/craigmillar.jpg" class = "cover_pic"></a></th>
-      </tr>
-      <tr id ="menu_caption">
-        <td><a href="around.html"><p>Around Edinburgh</p></a></td>
-        <td><a href="craigmillar.html"><p>Craigmillar Castle and Park</p></a></td>
-      </tr>
-      <tr>
-        <th><a href="flower.html"><img src="images/cover_photos/flower.jpg" class ="cover_pic"></a></th>
-        <th><a href="hermitage.html"><img src ="images/cover_photos/hermitage.jpg" class = "cover_pic"></a></th>
-      </tr>
-      <tr id ="menu_caption">
-        <td><a href="flower.html"><p>Flora</p></a></td>
-        <td><a href="hermitage.html"><p>The Hermitage of Braid and Blackford Hill</p></a></td>
-      </tr>
-      <tr>
-        <th><a href="linlithgow.html"><img src="images/cover_photos/linlithgow.jpg" class ="cover_pic"></a></th>
-        <th><img src="images/cover_photos/blank.jpg" class="filler"></th>
-      </tr>
-      <tr id ="menu_caption">
-        <td><a href="linlithgow.html"><p>Linlithgow</p></a></td>
-      </tr>
 
-    </table>
- 
-   </div>
+<div class="responsive">
+  <div class="img">
+    <a href="tantallon.html">
+      <img src="images/cover_photos/tantallon.jpg" alt="Tantallon castle" width="300" height="200">
+    </a>
+    <div class="desc"><p>Tantallon Castle and North Berwick</p></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="img">
+    <a href="ruthven.html">
+      <img src="images/cover_photos/ruthven.jpg" alt="Ruthven" width="300" height="200">
+    </a>
+    <div class="desc"><p>Ruthven Barracks and Area</p></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="img">
+    <a href="roman.html">
+      <img src="images/cover_photos/roman.jpg" alt="Roman Ruins" width="300" height="200">
+    </a>
+    <div class="desc"><p>Roman Ruins</p></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="img">
+    <a href="ne.html">
+      <img src="images/cover_photos/ne.jpg" alt="Northern England" width="300" height="200">
+    </a>
+    <div class="desc"><p>Carlisle and the Lake District</p></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="img">
+    <a href="eilean_donan.html">
+      <img src="images/cover_photos/eilean_donan.jpg" alt="Eilean Donan" width="300" height="200">
+    </a>
+    <div class="desc"><p>Eilean Donan</p></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="img">
+    <a href="scotland.html">
+      <img src="images/cover_photos/scotland.jpg" alt="Assorted Scotland" width="300" height="200">
+    </a>
+    <div class="desc"><p>Assorted Pictures of Scotland</p></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="img">
+    <a href="pentlands.html">
+      <img src="images/cover_photos/pentlands.jpg" alt="Pentlands" width="300" height="200">
+    </a>
+    <div class="desc"><p>Pentland Hills Regional Park</p></div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="img">
+    <a  href="around.html">
+      <img src="images/cover_photos/around.jpg" alt="Edinburgh" width="600" height="400">
+    </a>
+    <div class="desc"><p>Around Edinburgh</p></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="img">
+    <a href="craigmillar.html">
+      <img src="images/cover_photos/craigmillar.jpg" alt="Craigmillar" width="600" height="400">
+    </a>
+    <div class="desc"><p>Craigmillar Castle</p></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="img">
+    <a  href="flower.html">
+      <img src="images/cover_photos/flower.jpg" alt="Flowers and Animals" width="600" height="200">
+    </a>
+    <div class="desc"><p>Flora and Fauna</p></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="img">
+    <a  href="linlithgow.html">
+      <img src="images/cover_photos/linlithgow.jpg" alt="Linlithgow" width="600" height="200">
+    </a>
+    <div class="desc"><p>Linlithgow</p></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="img">
+    <a  href="hermitage.html">
+      <img src="images/cover_photos/hermitage.jpg" alt="Hermitage of Braid" width="600" height="200">
+    </a>
+    <div class="desc"><p>The Hermitage of Braid and Blackford Hills</p></div>
+  </div>
+</div>
+<div class="clearfix"></div>
+
+
+
+
 </body>
 </html>

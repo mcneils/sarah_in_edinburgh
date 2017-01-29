@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	   <meta name="viewport" content="width=device-width, initial-scale=1">
+     <script src ="photo_slider.js"></script>
+    <title>Tantallon Castle</title>
+    <!-- Bootstrap -->
+	   <link href="css/style1.css" rel="stylesheet">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+  </head>
+  <body>
+    <div class = "home_button"><a href="index.html"><p>Home</p></a></div>
+    <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>  
+    <!--eventually this needs to go in its own js file-->
+    <script >
+    
+      var captions;
+     // array of captions for pictures
+      captions = ["Tantallon Castle",
+      "On the ramparts of the castle", "Looking over the castle toward Bass Rock","Looking out over the castle", "The castle and the Forth of Firth", 
+       "The kitchen and various other parts of the ruin",
+       "An old staircase", "The castle", 
+         "From North Berwick!", "Bass Rock from Noth Berwick"];
+
+      photo_slider('<h2>Tantallon Castle and North Berwick</h2><p>North Berwick is a cute little town on the Forth of Firth, less than an hour&apos;s trainride from Edinburgh. About three miles out of town is a 14th century castle, Tantallon, that looks out over Bass Rock, noteable for its gannet colony. </p>',
+      'tantallon/tantallon_', captions);
+      
+    </script>
+    <div id = "my_images">       
+    </div>
+    <img src = "images/left_button.jpg" class="left_button">
+    <img src = "images/right_button.jpg" class="right_button">
+  </body>
+</html>

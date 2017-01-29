@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	   <meta name="viewport" content="width=device-width, initial-scale=1">
+     <script src ="photo_slider.js"></script>
+    <title>Throughout Scotland</title>
+    <!-- Bootstrap -->
+	   <link href="css/style1.css" rel="stylesheet">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+  </head>
+  <body>
+    <div class = "home_button"><a href="index.html"><p>Home</p></a></div>
+    <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>  
+    <!--eventually this needs to go in its own js file-->
+    <script >
+    
+      var captions;
+     // array of captions for pictures
+      captions = ["Dunstaffnage Castle, a thirteenth century castle near Oban, Scotland",
+      "Near Dunstaffnage Castle", "Dunstaffnage Castle",
+      "From Dunstaffnage Castle", "Dunstaffnage Castle", 
+       "Dunstaffnage Castle",
+       "Dunstaffnage Castle (last one!)", "Glencoe", 
+         "Glencoe", "Glencoe", "Glencoe", "Glencoe",
+          "Glencoe", "Glencoe", "Isle of Skye", 
+          "Isle of Skye, near the so-called 'Fairy Pools'",
+           "Unfortunately, due to flooding, we couldn't get closer to the Fairy Pools, but the scenery was still beautiful", 
+           "Isle of Skye", "Still near the Fairy Pools", 
+           "Isle of Skye, near Neist Point Lighthouse",
+         "Neist Point Lighthouse", "A bit closer!", 
+         "The lighthouse and cliffs!", "Neist Point Lighthouse", 
+         "Near Neist Point Lighthouse", "Near the lighthouse", 
+         "Neist Point", "A sheep! In Scotland! How revolutionary!",
+          "An almost sunset over the Irish Sea", "A bit of pink", 
+          "Neist Point Lighthouse!", "In Glen Affric", 
+          "In Glen Affric", "Glen Affric", "Glen Affric", 
+          "In Glen Affric", "In Glen Affric", "Glen Affric",
+           "Last picture of Glen Affric!"];
+
+      photo_slider('<h2>Travelling through Scotland</h2><p>Pictures from various parts of Scotland of which I don&apos;t have enough pictures to make individual albums, including Dunstaffnage Castle, Glencoe, Neist Point Lighthouse, and Glen Affric.</p>',
+      'travels_scotland/scotland_', captions);
+      
+    </script>
+    <div id = "my_images">       
+    </div>
+    <img src = "images/left_button.jpg" class="left_button">
+    <img src = "images/right_button.jpg" class="right_button">
+  </body>
+</html>

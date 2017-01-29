@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	   <meta name="viewport" content="width=device-width, initial-scale=1">
+     <script src ="photo_slider.js"></script>
+    <title>Roman Ruins</title>
+    <!-- Bootstrap -->
+	   <link href="css/style1.css" rel="stylesheet">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+  </head>
+  <body>
+    <div class = "home_button"><a href="index.html"><p>Home</p></a></div>
+    <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>  
+    <!--eventually this needs to go in its own js file-->
+    <script >
+    
+      var captions;
+     // array of captions for pictures
+      captions = ["A friend I made!",
+      "My friend and Ruthven", "The barracks (sans friend)",
+      "Looking out from the barracks", "Stables for the barracks",
+       "One side of the barracks","Looking out toward Kingussie from the barracks", 
+       "The stables again","And again", "Where soldiers were housed", 
+         "From the barracks", "It was a beautiful setting",
+          "Yay for pretty hills!", "On a hike near Ruthven",
+          "On a nearby hike", "Looking out over pastures",
+          "Aspen trees! (I think?)", "The sun always makes me happy",
+           "Scottish scenery!", "The barracks from a distance. Photographer credits to my brother!"  ];
+
+      photo_slider('<h2>Ruthven Barracks</h2><p>Ruthven Barracks, on the river Spey, were first built in 1719 following Jacobite uprisings in 1715, and then were destroyed in 1746. (Thanks to Wikipedia for the info) We also went hiking in a bird and wildlife refuge nearby.</p>',
+      'ruthven/ruthven_', captions);
+      
+    </script>
+    <div id = "my_images">       
+    </div>
+    <img src = "images/left_button.jpg" class="left_button">
+    <img src = "images/right_button.jpg" class="right_button">
+  </body>
+</html>

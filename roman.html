@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	   <meta name="viewport" content="width=device-width, initial-scale=1">
+     <script src ="photo_slider.js"></script>
+    <title>Roman Ruins</title>
+    <!-- Bootstrap -->
+	   <link href="css/style1.css" rel="stylesheet">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+  </head>
+  <body>
+    <div class = "home_button"><a href="index.html"><p>Home</p></a></div>
+    <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>  
+    <!--eventually this needs to go in its own js file-->
+    <script >
+    
+      var captions;
+     // array of captions for pictures
+      captions = ["Vindolanda, a Roman fort",
+      "At Vindolanda", "Roman walls at Vindolanda", 
+      "Vindolanda", "Vindolanda", "Vindolanda",
+        "Vindolanda (I really enjoyed seeing the sun again after a few weeks in the clouds)", "Vindolanda",
+         "Oh, look! Another picture of Vindolanda and the sun!", "The last one, I promise", 
+         "Looking out over Housestead", "Hadrian's Wall!",
+          "Hadrian's Wall stretching out", "The other direction!",
+          "I also have a lot of pictures of Hadrian's Wall stretching out into the distance...", "Okay, last one!"];
+
+      photo_slider('<h2>Roman Ruins</h2><p>We spent a beautiful afternoon exploring Hadrian&apos;s wall, as well as two forts along it, Vindolanda and Housestead, in northern England.</p>',
+      'roman/roman_', captions);
+      
+    </script>
+    <div id = "my_images">       
+    </div>
+    <img src = "images/left_button.jpg" class="left_button">
+    <img src = "images/right_button.jpg" class="right_button">
+  </body>
+</html>

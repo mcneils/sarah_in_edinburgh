@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	   <meta name="viewport" content="width=device-width, initial-scale=1">
+     <script src ="photo_slider.js"></script>
+    <title>Carlisle and the Lake District</title>
+    <!-- Bootstrap -->
+	   <link href="css/style1.css" rel="stylesheet">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+  </head>
+  <body>
+    <div class = "home_button"><a href="index.html"><p>Home</p></a></div>
+    <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>  
+    <!--eventually this needs to go in its own js file-->
+    <script >
+    
+      var captions;
+     // array of captions for pictures
+      captions = ["Stained Glass in Carlisle Cathedral",
+      "Stained Glass in Carlisle Cathedral",
+        "Carlisle Cathedral", "Carlisle Cathedral Ceiling",
+         "Carlisle Cathedral", "Carlisle Castle",
+        "On a walk in the Lake District", "In the Lake District",
+         "In the Lake District", "In the Lake District"];
+
+      photo_slider('<h2>Carlisle and the Lake District</h2><p>Carlisle is one of the northern most cities in England, just over the border with Scotland. It&apos;s located quite closely to the Lake District, though my family and I visited the national park a bit farther south, closer to Windermere.</p>',
+      'ne/ne_', captions);
+      
+    </script>
+    <div id = "my_images">       
+    </div>
+    <img src = "images/left_button.jpg" class="left_button">
+    <img src = "images/right_button.jpg" class="right_button">
+  </body>
+</html>
